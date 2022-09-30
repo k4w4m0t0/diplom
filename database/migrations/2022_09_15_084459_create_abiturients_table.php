@@ -27,14 +27,11 @@ return new class extends Migration
             $table->string('telephone',12);//номер телефона
             $table->string('address');//адрес прописки
             $table->string('citizenship');//граждантсво
-            
-            
+
             // id специальности
             $table->foreignId('specialities_id')->constrained('specialities')->onDelete('cascade');
-            // $table->foreignId('specialities_id')->referens('id')->on('specialities');
             // id типа документа
             $table->foreignId('documenttypes_id')->constrained('documenttypes')->onDelete('cascade');
-            // $table->foreignId('documenttypes_id')->referens('id')->on('documenttypes');
 
             $table->string('series_doc',6);//серия документа об образовании
             $table->string('number_doc',7);//номер документаоб образовании
