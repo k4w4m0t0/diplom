@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('address');//адрес прописки
             $table->string('citizenship');//граждантсво
             
+            
             // id специальности
             $table->foreignId('specialities_id')->constrained('specialities')->onDelete('cascade');
             // $table->foreignId('specialities_id')->referens('id')->on('specialities');
